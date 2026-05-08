@@ -15,4 +15,8 @@ jobs:
     steps:
       # 実行する具体的なコマンド
       - name: Print a message
-        run: echo "README.mdが更新されました！"
+        run: |
+          echo "README.mdが更新されました！"
+          echo "現在のブランチ名：${{github.ref}}"
+          echo "ファイル一覧"
+          ls -la
